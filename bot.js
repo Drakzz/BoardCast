@@ -10,7 +10,12 @@ client.on("message", message => {
   message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
  m.send(`${argresult}\n ${m}`);
 })
- message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` : عدد الاعضاء المستلمين`); 
+ message.channel.send
+ let embed4 = new Discord.RichEmbed()
+ .setDescription(':white_check_mark: | تم ارسال الرساله للجميع ..')
+     .setColor("#99999")
+
+     message.channel.sendEmbed(embed4);
  message.delete(); 
 };     
 });
@@ -18,7 +23,7 @@ client.on("message", message => {
 
 client.on('ready', () => {
    console.log(`----------------`);
-      console.log(`test Bot- Script By : Drakz_z`);
+      console.log(`BoardCast Bot- Script By : Drakz_z`);
         console.log(`----------------`);
       console.log(`ON ${client.guilds.size} Servers '     Script By : Drakz_z ' `);
     console.log(`----------------`);
@@ -29,4 +34,4 @@ client.user.setStatus("dnd")
 
 
 
-client.login("NjkwNDg5MzAwNDcwNDY0NTIy.XnSKhg.lxLUZLZaxd9DIC8nY0uM9x-dCqI");
+client.login("NjkwNDg5MzAwNDcwNDY0NTIy.XnSVVg.V2kNHX-_CkErRFCcErNO97yxnZY");
